@@ -44,6 +44,10 @@ class Author < ApplicationRecord
     end
   end
 
+  def is_admin?
+    admin
+  end
+
   private
 
   def gravatar_hash
