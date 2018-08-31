@@ -39,6 +39,8 @@ gem 'rails_admin'
 gem 'carrierwave', '~> 1.0'
 gem 'fog'
 
+gem 'mail_form'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end

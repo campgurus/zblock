@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  
+  resources :contacts, only: [:new, :create]
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :authors
   root to: 'blog/posts#index'
@@ -16,7 +18,7 @@ Rails.application.routes.draw do
 
   scope module: 'blog' do
     get 'about' => 'pages#about', as: :about
-    get 'contact' => 'pages#contact', as: :contact
+    # get 'contact' => 'pages#contact', as: :contact
     resources :posts
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
