@@ -32,12 +32,22 @@
               <%= f.text_field :title, class: 'form-control' %>
             </div>
           </li>
-          <li class="list-group-item">
-            <div class="field">
-              <%= f.label :banner_image_url %>
-              <%= f.text_field :banner_image_url, class: 'form-control' %>
-            </div>
-          </li>
+            <% if post.image.url.present? %>
+              <h3>Current Featured Image</h3>
+              <%= image_tag(post.image.url, style: 'height:100%;width:auto;' ) %>
+            <% end %>
+            <h4 class="list-group-item">Add a new Image</h4>
+            <li class="list-group-item">
+              <div>
+                <%= f.label :image, "upload an image file" %>
+                <%= f.file_field :image %>
+              </div>
+              <br>
+              <div>
+                <%= f.label :remote_image_url, "or add image url" %>
+                <%= f.text_field :remote_image_url %>
+              </div>
+            </li>
           <li class="list-group-item">
             <div class="field">
               <%= f.label :description %>

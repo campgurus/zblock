@@ -16,12 +16,15 @@
 #
 
 class Post < ApplicationRecord
+  mount_uploader :image, ImageUploader
   acts_as_taggable # Alias for acts_as_taggable_on :tags
 
   extend FriendlyId
   friendly_id :title, use: :slugged
 
   belongs_to :author
+
+  mount_uploader :image, ImageUploader
 
   PER_PAGE = 3
 

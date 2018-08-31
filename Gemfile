@@ -36,6 +36,8 @@ gem 'devise'
 gem 'bootstrap', '4.0.0.alpha3'
 
 gem 'rails_admin'
+gem 'carrierwave', '~> 1.0'
+gem 'fog'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
@@ -51,6 +53,7 @@ group :development, :test do
 	gem 'pry-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'dotenv-rails'
 end
 
 group :development do
