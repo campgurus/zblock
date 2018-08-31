@@ -34,7 +34,7 @@
           </li>
             <% if post.image.url.present? %>
               <h3>Current Featured Image</h3>
-              <%= image_tag(post.image.url, style: 'height:100%;width:auto;' ) %>
+              <%= image_tag(post.image_url, style: 'height:100%;width:auto;' ) %>
             <% end %>
             <h4 class="list-group-item">Add a new Image</h4>
             <li class="list-group-item">
